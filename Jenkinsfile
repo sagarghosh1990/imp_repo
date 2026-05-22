@@ -1,5 +1,5 @@
 node {
-    def PYTHON = 
+    def PYTHON = 'C:\\Users\\MONY SAGAR GHOSH\\AppData\\Local\\Programs\\Python\\Python314\\python.exe'
     try {
         stage('Checkout') {
             checkout scm
