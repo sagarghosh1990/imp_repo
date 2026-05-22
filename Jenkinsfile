@@ -2,9 +2,8 @@ pipeline {
     agent any
 
     environment {
-        PYTHON = 'C:\\Users\\MONY SAGAR GHOSH\\AppData\\Local\\Programs\\Python\\Python314\\python.exe'
+        PYTHON = 'C:\\Users\\MONY SAGAR GHOSH\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python 3.14'
     }
-
     stages {
         stage("checkout code") {
             steps {
