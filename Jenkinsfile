@@ -2,23 +2,22 @@ pipeline {
     agent any
 
     environment {
-        PYTHON = 'C:\\Users\\MONY SAGAR GHOSH\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python 3.14'
+        PYTHON ='C:\\Users\\MONY SAGAR GHOSH\\AppData\\Local\\Programs\\Python\\Python314\\python.exe'
     }
     stages {
         stage("checkout code") {
             steps {
                 checkout scm
-            }
-            
+            }    
         }
         stage('show python version') {
             steps {
-                bat "\"${env.PYTHON}\" --version"
+                bat "${env.PYTHON} --version"
             }
         }
         stage('run extract_data.py') {
             steps {
-                bat "\"${env.PYTHON}\" extract_data.py"
+                bat "${env.PYTHON} extract_data.py"
             }
         }
     }
